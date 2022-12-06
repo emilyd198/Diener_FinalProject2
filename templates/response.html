@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Schedule{% endblock %}
+
+{% block page_content %}
+    <div class="page-header">
+    <head>
+        <meta charset="UTF-8">
+        <title>College Course Schedule Helper</title>
+        <link rel="stylesheet" href='/static/style.css'>
+    </head>
+    <h1>College Course Schedule Helper</h1>
+    <h3>Departments: {{ department1 }} and {{ department2 }}.</h3>
+    {{ wtf.quick_form(form) }}
+    <body>
+        <table>
+                <tr>
+                    <th>Course Title</th>
+                    <th>Course Info</th>
+
+                </tr>
+                {%for key, values in session['course_info'].items()%}
+                    <tr>
+                        <td>{{ key }}</td>
+                        <td>{{ values }}</td>
+                {%endfor%}
+            </tr>
+        </table>
+    </body>
+</div>
+{% endblock %}
