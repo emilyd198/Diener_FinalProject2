@@ -11,4 +11,4 @@ There is also an option for the user to add a new course. In the navigation tab 
 “Add Course” where they will be redirected to a new page where they can type in a course code and title and add it to the
 database. If the course is not already in the database, they will get a message that says "Course Added Successfully".
 
-URL:
+URL:https://msdocs-python-postgres-eed.azurewebsites.net
